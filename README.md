@@ -122,32 +122,5 @@ Assistente: "A capital da França é Paris." 🔊
 
 🌐 Suporte a múltiplos idiomas (via Whisper e gTTS)
 
-🚀 Possíveis Evoluções
-
-Detecção automática de idioma para o TTS
-
-Conversação contínua (loop)
-
-Memória de contexto da conversa
-
-Interface gráfica ou web
-
-Detecção de silêncio no áudio
-
-Deploy em nuvem
-
-🎓 Aprendizados
-
-Com este projeto foi possível consolidar conhecimentos em:
-
-Integração de APIs de IA
-
-Processamento de áudio em Python
-
-Arquitetura modular
-
-Boas práticas de organização de projetos
-
-Desenvolvimento de soluções baseadas em IA generativa
 
 
