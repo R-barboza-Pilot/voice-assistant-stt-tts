@@ -1,8 +1,6 @@
 # voice-assistant-stt-tts
 Este projeto implementa um assistente conversacional por voz, capaz de compreender perguntas feitas por áudio e responder de forma falada.
 
-Você pode copiar e colar direto no GitHub.
-
 # 🎙️ Assistente Conversacional por Voz com Whisper, ChatGPT e gTTS
 
 ## 📌 Descrição do Projeto
