@@ -1,124 +1,109 @@
-# voice-assistant-stt-tts
-Este projeto implementa um assistente conversacional por voz, capaz de compreender perguntas feitas por áudio e responder de forma falada.
 
-# 🎙️ Assistente Conversacional por Voz com Whisper, ChatGPT e gTTS
+# 🎙️ Voice Chat com Whisper (Python)
 
-## 📌 Descrição do Projeto
-Este projeto implementa um **assistente conversacional por voz**, capaz de compreender perguntas feitas por áudio e responder de forma falada. A solução integra tecnologias de **Speech-to-Text (STT)** e **Text-to-Speech (TTS)** em sinergia com **Inteligência Artificial Generativa**, permitindo interações naturais e multi-idiomas.
+Projeto simples em Python que grava áudio do microfone e realiza transcrição usando o modelo Whisper da OpenAI.
 
-O sistema utiliza o **Whisper**, da OpenAI, para transcrição automática de fala, o **ChatGPT** para geração de respostas inteligentes e o **Google Text-to-Speech (gTTS)** para converter texto em áudio.
-
-Este projeto foi desenvolvido como parte de um **desafio prático da DIO**, com foco em aplicação real, boas práticas e organização de código.
+Ideal para estudos de:
+- Speech to Text (STT)
+- Integração com APIs de IA
+- Projetos iniciais com Python + OpenAI
 
 ---
 
-## 🧠 Arquitetura da Solução
+## 🚀 Funcionalidades
 
-O fluxo da aplicação segue o pipeline abaixo:
-
-
-
-🎤 Microfone
-↓
-📝 Whisper (Speech-to-Text)
-↓
-🤖 ChatGPT (OpenAI API)
-↓
-🔊 gTTS (Text-to-Speech)
-↓
-🔈 Usuário
-
-
-Cada etapa é desacoplada em módulos específicos, facilitando manutenção, testes e futuras evoluções.
+- Grava áudio do microfone
+- Salva em arquivo `.wav`
+- Transcreve usando Whisper (OpenAI)
+- Estrutura profissional de projeto
+- Pronto para evoluir para ChatGPT + TTS
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-- **Python**
-- **OpenAI API**
-  - Whisper (Speech-to-Text)
-  - ChatGPT (IA Generativa)
-- **Google Text-to-Speech (gTTS)**
-- **sounddevice** (captura de áudio)
-- **scipy** (manipulação de arquivos WAV)
-- **playsound** (reprodução de áudio)
-- **python-dotenv** (variáveis de ambiente)
+## 🛠️ Tecnologias utilizadas
+
+- Python 3.10+
+- OpenAI API
+- Whisper
+- SoundDevice
+- SciPy
+- VS Code
 
 ---
 
-## 📂 Estrutura do Projeto
+## 📁 Estrutura do projeto
 
-voice-chatgpt/
-│
+voice-chatgpt-whisper/
 ├── src/
-│ ├── audio_input.py # Captura de áudio do microfone
-│ ├── speech_to_text.py # Transcrição com Whisper
-│ ├── chatgpt_client.py # Comunicação com ChatGPT
-│ ├── text_to_speech.py # Conversão de texto em áudio
-│ └── main.py # Orquestração do fluxo
-│
-├── audio/
-│ ├── input.wav
-│ └── output.mp3
-│
+│ └── main.py
 ├── .env.example
+├── .gitignore
 ├── requirements.txt
 └── README.md
 
 ---
 
-## ⚙️ Como Executar o Projeto
+## ⚙️ Como executar o projeto
 
 ### 1️⃣ Clonar o repositório
-bash
-git clone https://github.com/seu-usuario/voice-chatgpt
-cd voice-chatgpt
 
-2️⃣ Criar e ativar ambiente virtual (opcional)
+git clone https://github.com/seu-usuario/voice-chatgpt-whisper.git
+cd voice-chatgpt-whisper
+
+2️⃣ Criar ambiente virtual
 python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
 
-3️⃣ Instalar as dependências
+Ativar no Windows (PowerShell):
+
+venv\Scripts\activate
+
+3️⃣ Instalar dependências
 pip install -r requirements.txt
 
-4️⃣ Configurar variáveis de ambiente
+4️⃣ Configurar variável de ambiente
 
-Crie um arquivo .env baseado no .env.example:
+Crie um arquivo .env baseado no exemplo:
 
-OPENAI_API_KEY=sua_chave_da_openai
+OPENAI_API_KEY=sua_chave_aqui
 
-5️⃣ Executar a aplicação
+5️⃣ Executar o projeto
 python src/main.py
 
-▶️ Exemplo de Uso
+O sistema irá:
 
-O sistema grava a voz do usuário por alguns segundos.
+Gravar 5 segundos de áudio
 
-O áudio é transcrito automaticamente pelo Whisper.
+Salvar o arquivo
 
-O texto é enviado ao ChatGPT.
+Tentar transcrever (necessário crédito na OpenAI)
 
-A resposta gerada é convertida em áudio.
+⚠️ Observações importantes
 
-O usuário escuta a resposta falada.
+Se não houver crédito na OpenAI, o projeto exibirá erro 429 (quota) — isso é esperado.
 
-Exemplo:
+O áudio ainda será gravado normalmente.
 
-Usuário: "Qual é a capital da França?"
-Assistente: "A capital da França é Paris." 🔊
+O arquivo venv/ não deve ser versionado.
 
-🌍 Funcionalidades
+📌 Próximos passos (evolução)
 
-🎤 Captura de áudio via microfone
+Integração com ChatGPT
 
-📝 Transcrição automática de fala
+Conversa por voz contínua
 
-🤖 Respostas inteligentes com IA generativa
+Text-to-Speech (TTS)
 
-🔊 Conversão de texto em voz
+Interface gráfica
 
-🌐 Suporte a múltiplos idiomas (via Whisper e gTTS)
+👨‍💻 Autor
 
+Projeto desenvolvido para fins educacionais e estudo de IA aplicada.
+
+## 🚀 Próximos passos
+
+- Integração com ChatGPT
+- Conversa por voz contínua
+- Text-to-Speech (TTS)
+- Interface gráfica
 
 
